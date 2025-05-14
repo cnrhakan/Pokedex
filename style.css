@@ -1,0 +1,227 @@
+/* Font */
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&family=Share+Tech&display=swap");
+
+/* Reset/ */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Share Tech", sans-serif;
+}
+
+body {
+  top: 0;
+  background: linear-gradient(90deg, #605ea2, #ea7b79);
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+/* Header  */
+.header-container {
+  margin: 2rem auto;
+  max-width: 1250px;
+  display: flex;
+  flex-direction: column;
+}
+
+h1 {
+  text-align: center;
+  font-size: 3rem;
+  color: white;
+}
+
+/* Search part */
+.search-part {
+  display: flex;
+  margin: 2rem auto;
+  min-width: 300px;
+  position: relative;
+  background-color: beige;
+  border-radius: 0.5rem;
+  justify-content: space-between;
+  height: 50px;
+}
+
+.search-input {
+  padding: 1rem;
+  outline: none;
+  border: none;
+  background-color: transparent;
+  color: black;
+  width: 88%;
+  font-size: 1rem;
+}
+
+.search-input::placeholder {
+  text-transform: none;
+}
+
+.fa-xmark {
+  position: absolute;
+  right: 2rem;
+  top: 50%;
+  transform: translateY(-50%);
+  opacity: 0.5;
+  padding: 0.2rem;
+  cursor: default;
+  pointer-events: none;
+}
+
+/* Filters */
+.filters {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.sortIdBtn,
+.sortNameBtn,
+.filterSelect {
+  width: 150px;
+  height: 60px;
+  border: none;
+  background-color: white;
+  border-radius: 0.5rem;
+  outline: none;
+  text-transform: capitalize;
+  text-align: center;
+  cursor: pointer;
+  font-size: 0.9rem;
+}
+
+/* Main content */
+.poke-wrapper {
+  max-width: 80%;
+  padding: 2rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.2rem;
+  justify-content: center;
+  margin: 3rem auto;
+}
+
+.poke-wrapper:last-child {
+  margin-bottom: 5rem;
+}
+
+/* Card */
+.poke-card {
+  width: 300px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: rgba(149, 157, 165, 1) 0px 8px 24px;
+  height: auto;
+  border-radius: 1rem;
+  overflow: hidden;
+  transition: transform 0.3s ease-in-out;
+  overflow: hidden;
+}
+
+.poke-card-div-img {
+  width: 100%;
+  border-radius: 1rem 1rem 0 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 65%;
+  transition: height 0.35s ease-out;
+}
+
+.poke-card-div-img img {
+  width: 100%;
+  height: auto;
+}
+
+.poke-card-info {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  gap: 0.3rem;
+  width: 100%;
+  height: 35%;
+  padding: 0.5rem 1rem;
+
+  transition: height 0.35s ease-out;
+}
+
+.poke-card-info * {
+  text-transform: capitalize;
+  margin: auto auto;
+}
+
+.poke-card-info span {
+  text-align: left;
+  margin: auto 0;
+}
+
+/* Card hover */
+.poke-card:hover {
+  transform: scale(1.1);
+  height: auto;
+  overflow: hidden;
+}
+
+.poke-card:hover .poke-card-div-img {
+  height: 40%;
+}
+
+.poke-card:hover .poke-card-div-img img {
+  height: 100%;
+  width: auto;
+}
+
+.poke-card:hover .poke-card-info {
+  background-color: wheat;
+  color: black;
+  height: 60%;
+}
+
+.stat-item {
+  display: flex;
+  align-items: center;
+}
+
+.stat-item b:not(:first-child) {
+  margin-left: 0.5rem;
+}
+
+.red-icon {
+  color: #ea3323;
+}
+
+/* Back to top button */
+
+.top-arrow-btn {
+  position: fixed;
+  background-color: rgb(41, 16, 2);
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  height: 3rem;
+  width: 3rem;
+  bottom: 40px;
+  right: 45px;
+  text-align: center;
+  display: none;
+}
+
+.top-arrow-btn i {
+  color: white;
+  font-size: 1.5rem;
+}
+@media (max-width: 768px) {
+  .filters {
+    flex-direction: column;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+  .search-part {
+    min-width: 250px;
+  }
+}
